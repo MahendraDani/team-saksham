@@ -1,0 +1,5 @@
+Welcome to testing file!
+
+1. This is a test commit to check if my commits are going to remote repo or not. 4/9/24 09:23 ~ AthSat
+
+=> Created a branch athsat and added testing.txt under root.
