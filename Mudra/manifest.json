@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Mudra",
+  "description": "A two way ISL to audio/text and audio to ISL/text convertor with support in multiple regional languages.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": "./images/hello_extensions.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "popup.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]
+}
