@@ -7,13 +7,17 @@
     "default_popup": "./popup/popup.html",
     "default_icon": "./images/hello_extensions.png"
   },
+  "permissions": [
+    "activeTab", "tabCapture"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "web_accessible_resources": [
     {
-      "resources": ["popup.html", "popup.css"],
+      "resources": ["popup/popup.html", "popup/isl-to-audio.html", "dist/isl-to-audio.bundle.js", "popup/popup.css", "popup/isl-to-audio.css", "audio/snap.wav"],
       "matches": ["<all_urls>"]
     }
   ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self';"
-  }
+  "options_page": "./options/options.html"
 }
