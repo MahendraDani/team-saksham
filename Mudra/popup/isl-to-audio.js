@@ -1,14 +1,11 @@
 import Webcam from "webcam-easy";
 console.log("isl-to-audio.js loaded");
 const webcamElement = document.getElementById("webcam");
-const canvasElement = document.getElementById("canvas");
-// const snapSoundElement = document.getElementById('snapSound');
-// const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
 
 async function startWebcam() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-    const webcam = new Webcam(webcamElement, "user", canvasElement);
+    const webcam = new Webcam(webcamElement, "user");
     webcam
       .start()
       .then((result) => {
@@ -27,18 +24,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  const dropdown = document.querySelector(".dropdown");
+  const start = document.getElementById("start");
+  start.addEventListener("click", () => {
+    const outputText = document.getElementById("output-text");
+    outputText.classList.remove("output-hidden");
+
+    const cam = document.getElementById("webcam");
+    cam.classList.add("active");
+  });
+
+  const stop = document.getElementById("stop");
+  stop.addEventListener("click", () => {
+    const cam = document.getElementById("webcam");
+    cam.classList.remove("active");
+  });
+
+  const dropdownWrapper = document.querySelector(".dropdown");
   const select = document.querySelector(".dropdown-select");
 
   select.addEventListener("focus", () => {
-    dropdown.classList.add("open");
+    dropdownWrapper.classList.add("open");
   });
 
   select.addEventListener("change", () => {
-    dropdown.classList.remove("open");
+    dropdownWrapper.classList.remove("open");
   });
 
   select.addEventListener("blur", () => {
-    dropdown.classList.remove("open");
+    dropdownWrapper.classList.remove("open");
   });
+
+
 });

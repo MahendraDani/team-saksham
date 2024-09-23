@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="isl-to-audio.css" />
+    <link rel="stylesheet" href="audio-to-isl.css" />
   </head>
   <body>
     <a href="popup.html" class="back-button"> </a>
     <section id="heading">
-      <h1>ISL to Audio/Text</h1>
+      <h1>Audio/Text to ISL</h1>
     </section>
-    <section id="live-cam">
-      <video id="webcam" autoplay playsinline width="400" height="350"></video>
+    <section id="output-isl" class="output-hidden">
+      <img
+        src="../images/signLangAni.gif"
+        alt=""
+        width="200px"
+        height="200px"
+      />
+      <h2></h2>
     </section>
     <section id="languages">
-      <h3>Select Language:</h3>
+      <h3>Select Audio Language:</h3>
       <div class="dropdown">
         <select id="language-select" class="dropdown-select">
           <option value="hn">Hindi</option>
@@ -24,6 +30,7 @@
         </select>
       </div>
     </section>
+
     <section id="output-text" class="output-hidden">
       <div id="output-container">
         <p id="output">
@@ -37,11 +44,12 @@
         </p>
       </div>
     </section>
+
     <section id="controls">
       <button class="btn" role="button" id="start">Start</button>
       <button class="btn" role="button" id="stop">Stop</button>
     </section>
 
-    <script src="../dist/isl-to-audio.bundle.js"></script>
+    <script src="./audio-to-isl.js"></script>
   </body>
 </html>
