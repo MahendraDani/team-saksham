@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="isl-to-audio.css" />
+  </head>
+  <body>
+    <a href="popup.html" class="back-button"> </a>
+    <section id="heading">
+      <h1>ISL to Audio/Text</h1>
+    </section>
+    <section id="live-cam">
+      <video id="webcam" autoplay playsinline width="400" height="350"></video>
+    </section>
+    <section id="languages">
+      <h3>Select Language:</h3>
+      <div class="dropdown">
+        <select id="language-select" class="dropdown-select">
+          <option value="hn">Hindi</option>
+          <option value="mr`">Marathi</option>
+          <option value="tm">Tamil</option>
+          <option value="bg">Bengali</option>
+          <option value="ml">Malayalam</option>
+          <!-- Add more languages as needed -->
+        </select>
+      </div>
+    </section>
+    <section id="output-text" class="output-hidden">
+      <div id="output-container">
+        <p id="output">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+      </div>
+    </section>
+    <section id="controls">
+      <button class="btn" role="button" id="start">Start</button>
+      <button class="btn" role="button" id="stop">Stop</button>
+    </section>
+
+    <script src="../dist/isl-to-audio.bundle.js"></script>
+  </body>
+</html>

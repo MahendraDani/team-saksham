@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "samarakan";
+  src: url("../fonts/samarakan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 500px;
+  height: auto;
+  background-color: #eaf7da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-image: url("../images/mudraBg.jpg");
+  transition: height 0.5s ease-in-out;
+  position: relative;
+}
+
+#heading {
+  font-weight: 600;
+  font-size: x-large;
+  font-family: "samarakan";
+  margin-top: 10px;
+}
+
+#heading > h1 {
+  margin: 0;
+}
+
+#live-cam {
+  height: fit-content;
+  width: fit-content;
+}
+
+#webcam {
+  border-radius: 10px;
+}
+
+.active {
+  -webkit-box-shadow: 0px 0px 12px 2px rgba(144, 238, 144, 1);
+  -moz-box-shadow: 0px 0px 12px 2px rgba(144, 238, 144, 1);
+  box-shadow: 0px 0px 12px 2px rgba(144, 238, 144, 1);
+}
+
+#output-container {
+  border-radius: 10px;
+  background-color: rgba(255, 215, 0, 0.5);
+  padding: 10px;
+  height: auto;
+  width: 380px;
+}
+
+#output {
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.output-hidden {
+  display: none;
+}
+
+#languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: large;
+}
+
+.dropdown {
+  margin: 0;
+  position: relative;
+}
+
+.dropdown-select {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  background-color: rgb(234, 224, 213);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.dropdown-select:hover {
+  -webkit-box-shadow: 0px 0px 12px 2px rgb(147, 102, 57, 1);
+  -moz-box-shadow: 0px 0px 12px 2px rgb(147, 102, 57, 1);
+  box-shadow: 0px 0px 12px 2px rgb(147, 102, 57, 1);
+}
+
+.dropdown-select:focus {
+  outline: none;
+  border: 4px solid rgb(147, 102, 57, 0.699);
+}
+
+.dropdown::after {
+  content: "\25BC"; 
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.dropdown.open::after {
+  transform: translateY(-50%) rotate(180deg); /* Up arrow */
+}
+
+.btn {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #eae0d5 0,
+    #936639 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  width: 100px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.btn:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0px 5px;
+  background-color: #936639;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button::before {
+  content: "\2190"; /* Unicode for left arrow */
+  font-size: 24px; /* Increase the size of the arrow */
+}
+
+.back-button:hover {
+  background-color: #eae0d5;
+  color: black;
+}

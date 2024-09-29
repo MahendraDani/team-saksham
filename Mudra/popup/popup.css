@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Samarkan";
+  src: url("../fonts/samarakan.ttf") format("truetype");
+}
+
+body {
+  width: 350px;
+  height: 350px;
+  padding: 20px;
+  /* background-color: #eaf7da; */
+  background: url("../images/mudraBg.jpg");
+}
+.mudra-heading {
+  font-weight: 600;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  font-family: "Samarkan", sans-serif;
+}
+#main-interface {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#audio-to-isl {
+  padding: 15px;
+  font: bold;
+  background-color: #eae0d5;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Samarkan", sans-serif;
+  font-size: 18px;
+}
+
+#isl-to-audio {
+  padding: 15px;
+  font: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #936639;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-family: "Samarkan", sans-serif;
+  font-size: 18px;
+}
+
+#giphy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

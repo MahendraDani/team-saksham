@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="audio-to-isl.css" />
+  </head>
+  <body>
+    <a href="popup.html" class="back-button"> </a>
+    <section id="heading">
+      <h1>Audio/Text to ISL</h1>
+    </section>
+    <section id="output-isl" class="output-hidden">
+      <img
+        src="../images/signLangAni.gif"
+        alt=""
+        width="200px"
+        height="200px"
+      />
+      <h2></h2>
+    </section>
+    <section id="languages">
+      <h3>Select Audio Language:</h3>
+      <div class="dropdown">
+        <select id="language-select" class="dropdown-select">
+          <option value="hn">Hindi</option>
+          <option value="mr`">Marathi</option>
+          <option value="tm">Tamil</option>
+          <option value="bg">Bengali</option>
+          <option value="ml">Malayalam</option>
+          <!-- Add more languages as needed -->
+        </select>
+      </div>
+    </section>
+
+    <section id="output-text" class="output-hidden">
+      <div id="output-container">
+        <p id="output">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+      </div>
+    </section>
+
+    <section id="controls">
+      <button class="btn" role="button" id="start">Start</button>
+      <button class="btn" role="button" id="stop">Stop</button>
+    </section>
+
+    <script src="./audio-to-isl.js"></script>
+  </body>
+</html>
